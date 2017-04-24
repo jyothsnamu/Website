@@ -1,0 +1,34 @@
+<html>
+    <head>
+    <link href="menu.css" rel="stylesheet">
+    <script src = jquery-3.2.1.js></script>
+    <script>
+        /* global $ */
+        $(document).ready(function(){
+        $('ul li').hover(function() {
+     var x = $(this);
+   
+    console.log("hello");
+     $('.menuUnderline').stop().animate({
+        'width': x.width(),
+        'left' : x.position().left
+     }, 400);
+});
+        });
+         console.log("hello");
+    </script>
+    </head>
+    <body>  
+    <div>
+    <ul>
+       
+        <li><button><a href="#" class="about">About</a></button></li>
+        <li><button><a href="#" class="products">Projects</a></button></li>
+        <li><button><a href="#" class="services">Resume</a></button></li>
+        <li><button><a href="#" class="form">Forum</a></button></li>
+        <li><button><a href="#" class="contact">Contact</a></button></li>
+        <div class="menuUnderline"></div>
+    </ul>
+    </div>
+    </body>
+</html>
